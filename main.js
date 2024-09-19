@@ -1410,12 +1410,9 @@ const cat = document.querySelectorAll(".category");
 
 cat.forEach((ele) => {
   ele.addEventListener("click", (e) => {
-    console.log(e.target.innerHTML);
-
     cat.forEach((item) => {
       item.classList.remove("active-category");
     });
-
     e.currentTarget.classList.add("active-category");
   });
 });
@@ -1432,8 +1429,6 @@ document.addEventListener("DOMContentLoaded", () => {
   if (inputSearch && searchBtn) {
     searchBtn.addEventListener("click", () => {
       if (inputSearch.value) {
-        console.log(inputSearch.value);
-
         const oneBook = books.filter(
           (ele) =>
             ele.title.toLocaleLowerCase() ==
@@ -1533,11 +1528,8 @@ for (let index = 1; index < 18; index++) {
                                                                       </button>
                                                                   </div>
                                                               </div>
-    
                                     </div>
                                 </div>
-  
-                            
                             `;
 }
 
@@ -1566,11 +1558,8 @@ for (let index = 18; index < 19; index++) {
 }
 
 for (let index = 19; index < 36; index++) {
-  newTwoCarouselInner.innerHTML += `
-  
-  <div class="carousel-item ">
+  newTwoCarouselInner.innerHTML += `<div class="carousel-item ">
                                     <div class="newTwo-second-carousel style-carousel">
-                                    
                                     <div id=${books[index].id}  class="m-2 card-book ">
                                                                       <div>
                                                                       <img
@@ -1587,10 +1576,8 @@ for (let index = 19; index < 36; index++) {
                                                                       </button>
                                                                   </div>
                                                               </div>
-    
                                     </div>
                                 </div>
-                            
                             `;
 }
 
@@ -1621,8 +1608,7 @@ for (let index = 36; index < 37; index++) {
 }
 
 for (let index = 37; index < 54; index++) {
-  newThreeCarouselInner.innerHTML += `
-  <div class="carousel-item ">
+  newThreeCarouselInner.innerHTML += `<div class="carousel-item ">
                                     <div class="NewThree-second-carousel style-carousel">
                                     <div id=${books[index].id}  class="m-2 card-book ">
                                                                       <div>
@@ -1640,12 +1626,8 @@ for (let index = 37; index < 54; index++) {
                                                                       </button>
                                                                   </div>
                                                               </div>
-    
                                     </div>
                                 </div>
-  
-  
-                            
                             `;
 }
 
@@ -1674,9 +1656,7 @@ for (let index = 54; index < 55; index++) {
 }
 
 for (let index = 55; index < 72; index++) {
-  newFourCarouselInner.innerHTML += `
-  
-  <div class="carousel-item ">
+  newFourCarouselInner.innerHTML += `<div class="carousel-item ">
                                     <div class="NewFour-second-carousel style-carousel">
                                     <div id=${books[index].id}  class="m-2 card-book ">
                                                                       <div>
@@ -1694,11 +1674,8 @@ for (let index = 55; index < 72; index++) {
                                                                       </button>
                                                                   </div>
                                                               </div>
-    
                                     </div>
                                 </div>
-  
-                            
                             `;
 }
 
@@ -1727,9 +1704,7 @@ for (let index = 72; index < 73; index++) {
 }
 
 for (let index = 73; index < 90; index++) {
-  newFiveCarouselInner.innerHTML += `
-  
-         <div class="carousel-item ">
+  newFiveCarouselInner.innerHTML += `<div class="carousel-item ">
                                     <div class="NewFive-second-carousel style-carousel">
                                     
                                     <div id=${books[index].id}  class="m-2 card-book ">
@@ -1748,44 +1723,14 @@ for (let index = 73; index < 90; index++) {
                                                                       </button>
                                                                   </div>
                                                               </div>
-    
                                     </div>
                                 </div>
-                            
                             `;
 }
 
 
 // ===========    newModal =========
 
-
-
-// const newCard = document.querySelectorAll(".viewNewBook");
-
-// newCard.forEach((ele) => {
-//   ele.addEventListener("click", () => {
-//     newMethos(ele.id);
-
-//     console.log(ele.id);
-//   });
-// });
-
-// const newModalTitle = document.querySelector(".new-modal-title");
-// const newImageBody = document.querySelector(".new-image-body");
-// const newAuthor = document.querySelector(".new-author");
-// const newModalBody = document.querySelector(".new-description");
-
-// function newMethos(id) {
-//   const ind = id - 1;
-
-//   newModalTitle.innerHTML = `${books[ind].title}`;
-
-//   newImageBody.innerHTML = `<img src= ${books[ind].image} width="100%" height="500px" style="border-radius: 10px;"/>`;
-
-//   newAuthor.innerHTML = `<h5>Author: <span style="font-weight:700 ; color:red">${books[ind].author}</span></h5>`;
-
-//   newModalBody.innerHTML = `<p>${books[ind].description}</p>`;
-// }
 
 const card = document.querySelectorAll(".vieBook");
 
