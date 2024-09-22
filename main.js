@@ -1419,7 +1419,6 @@ cat.forEach((ele) => {
 
 
 // =====================  Search ========================================
-
 document.addEventListener("DOMContentLoaded", () => {
   const inputSearch = document.querySelector(".inputSearch");
   const searchBtn = document.querySelector(".search-btn");
@@ -1431,8 +1430,9 @@ document.addEventListener("DOMContentLoaded", () => {
       if (inputSearch.value) {
         const oneBook = books.filter(
           (ele) =>
-            ele.title.toLocaleLowerCase() ==
-            inputSearch.value.toLocaleLowerCase()
+            ele.title.toLocaleLowerCase().includes(
+              inputSearch.value.toLocaleLowerCase()
+            )
         );
 
         main.innerHTML = ``;
@@ -1482,6 +1482,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   } else {
+    // Add any fallback behavior here if necessary.
   }
 });
 
